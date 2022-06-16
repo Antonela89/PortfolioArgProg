@@ -1,0 +1,11 @@
+div {
+    background-color: #a1b5cb;
+}
+
+app-redes-sociales {
+    display:flex;
+    position: relative;
+    right: 0;
+    align-items: center;
+
+}
