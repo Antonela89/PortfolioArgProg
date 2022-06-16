@@ -1,0 +1,10 @@
+.redes {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 180px;
+}
+.redes a img {
+    width: 7.5%;
+    margin-left: 5px;
+}
