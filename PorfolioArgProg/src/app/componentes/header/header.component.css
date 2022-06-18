@@ -1,23 +1,13 @@
-.barra {
-    width:100%;
-    height: 100px;
-    background-color:  #0c0c2c;
-    display: flex;
-    justify-content: space-between;
+.container-fluid {
+    height: 120vh;
+    padding: 0;
 }
 
-.barra app-logo {
-    width: 50%;
+.container-fluid .row{
+    padding: 0;
+    margin: 0;
 }
 
-.barra app-redes-sociales {
-    width: 50%;
-    display: flex;
-    align-items: center;    
-    right: 20px;
-}
-
-.banner {
-    width: 100%;
-    height: 100vh;
+.container-fluid .row app-logo{
+    padding: 0;
 }

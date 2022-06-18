@@ -5,20 +5,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { LogoComponent } from './componentes/logo/logo.component';
-import { RedesSocialesComponent } from './componentes/redes-sociales/redes-sociales.component';
-import { BannerComponent } from './componentes/banner/banner.component';
+import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { HardYSoftComponent } from './componentes/hard-ysoft/hard-ysoft.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FooterComponent } from './componentes/footer/footer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LogoComponent,
-    RedesSocialesComponent,
-    BannerComponent
+    AcercaDeComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    ProyectosComponent,
+    HardYSoftComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

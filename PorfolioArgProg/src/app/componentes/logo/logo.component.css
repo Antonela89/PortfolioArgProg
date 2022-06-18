@@ -1,4 +1,33 @@
-.AP #logo {
-    width: 25%;
-    height: 7.5%
+.container-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#encabezado{
+    background-color: #0c0c2c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+#encabezado .logo {
+    width: 200px;
+}
+
+#encabezado .redes{
+    display: flex;
+    margin-right: 12px;
+}
+#encabezado .redes img{
+    width: 30px;
+}
+
+#banner{
+    padding: 0;
+}
+
+#banner img{
+    width: 100%;
 }
