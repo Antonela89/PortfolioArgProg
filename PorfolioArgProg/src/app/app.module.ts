@@ -12,6 +12,8 @@ import { HardYSoftComponent } from './componentes/hard-ysoft/hard-ysoft.componen
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 
 @NgModule({
@@ -24,14 +26,17 @@ import { FooterComponent } from './componentes/footer/footer.component';
     EducacionComponent,
     ProyectosComponent,
     HardYSoftComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    BrowserAnimationsModule,
+    NgxTypedJsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

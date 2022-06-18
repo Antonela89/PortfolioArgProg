@@ -27,12 +27,30 @@
 }
 
 #banner {
-    padding: 0;
+    display: flex;
 }
 
 #banner img {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#banner .titulo{
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    z-index: 10;
+    top: 60%;
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+#banner .titulo #listado .p1 {
+    color: #38bbc3 ;
+}
+
+#banner .titulo #listado .p2 {
+    color: #ae3452;
 }
 
 /*Responsivo para pantallas menores a 375px*/
@@ -76,6 +94,7 @@
         height: 225px;
     }
 }
+
 
 /*Responsivo para pantallas menores a 320px*/
 @media only screen and (max-width: 320px) {

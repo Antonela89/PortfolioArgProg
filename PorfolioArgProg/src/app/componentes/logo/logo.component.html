@@ -19,4 +19,20 @@
     <div>
         <img src="../../../assets/iconos_header/banner2.jpg" alt="" class="img-fluid">
     </div>
+    <div class="titulo">
+        <div id="listado">
+            <p class="p1">Mi Portafolio</p>
+            <p class="p2">My Porfolio</p>
+        </div>
+        <ngx-typed-js class="efectoEscritura"
+        [stringsElement]="'#listado'"
+        [showCursor]="true"
+        [startDelay]="1000"
+        [typeSpeed]= "75"
+        [backSpeed]="75"
+        [smartBackspace]="true"
+        [cursorColor]="'.p1'">
+        <span class="typing"></span>
+    </ngx-typed-js>
+    </div>
 </div>
