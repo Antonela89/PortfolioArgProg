@@ -1,17 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
 package com.porfolio.ab.Interface;
 
 import com.porfolio.ab.Entity.Persona;
 import java.util.List;
 
-
-/**
- *
- * @author atena
- */
 public interface IPersonaService {
     //Traer una lista de persona
     public List<Persona> getPersona();

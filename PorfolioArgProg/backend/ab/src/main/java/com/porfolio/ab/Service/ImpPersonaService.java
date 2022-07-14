@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.porfolio.ab.Service;
 
 import com.porfolio.ab.Entity.Persona;
@@ -12,10 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-/**
- *
- * @author atena
- */
 @Service
 public class ImpPersonaService implements IPersonaService {
     @Autowired IPersonaRepository ipersonaRepository;

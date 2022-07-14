@@ -14,6 +14,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { HttpClientModule } from  '@angular/common/http';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     BrowserAnimationsModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
