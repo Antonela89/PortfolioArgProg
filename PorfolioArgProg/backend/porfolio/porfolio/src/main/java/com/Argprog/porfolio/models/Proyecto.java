@@ -8,13 +8,14 @@ import javax.persistence.Id;
 @Entity
 public class Proyecto {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idProy;
 	private String nombreProyecto;
 	private String descripcion;
 	private String url;
 	private String fotoProyecto;
 
+	//Contructores
 	public Proyecto() {
 	}
 
@@ -26,6 +27,7 @@ public class Proyecto {
 		this.fotoProyecto = fotoProyecto;
 	}
 
+	//Getters and Setters
 	public Long getidProy() {
 		return idProy;
 	}

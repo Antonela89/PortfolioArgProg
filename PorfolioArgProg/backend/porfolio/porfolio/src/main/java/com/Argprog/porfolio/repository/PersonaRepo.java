@@ -1,11 +1,11 @@
 package com.Argprog.porfolio.repository;
 
 
-import com.Argprog.porfolio.models.Usuario;
+import com.Argprog.porfolio.models.Persona;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UsuarioRepo extends JpaRepository <Usuario, Long> {
+public interface PersonaRepo extends JpaRepository <Persona, Long> {
 	
 }

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { LogoComponent } from './componentes/logo/logo.component';
-import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
+import {AcercaDeComponent } from './componentes/acerca-de/acerca-de.component'
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { HardYSoftComponent } from './componentes/hard-ysoft/hard-ysoft.component';
@@ -15,6 +15,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { HttpClientModule } from  '@angular/common/http';
+import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,6 +31,8 @@ import { HttpClientModule } from  '@angular/common/http';
     ProyectosComponent,
     HardYSoftComponent,
     FooterComponent,
+    InicioSesionComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import { HttpClientModule } from  '@angular/common/http';
     NgCircleProgressModule.forRoot({}),
     BrowserAnimationsModule,
     NgxTypedJsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

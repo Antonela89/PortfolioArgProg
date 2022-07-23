@@ -8,12 +8,13 @@ import javax.persistence.Id;
 @Entity
 public class Skills {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idSkill;
 	private String nombreSkill;
 	private String fotoSkill;
 	private int porcentaje;
 
+	//Contructores
 	public Skills() {
 	}
 
@@ -24,6 +25,7 @@ public class Skills {
 		this.porcentaje = porcentaje;
 	}
 
+	//Getters and Setters
 	public Long getIdSkill() {
 		return idSkill;
 	}

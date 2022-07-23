@@ -8,13 +8,14 @@ import javax.persistence.Id;
 @Entity
 public class Experiencia {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idExp;
 	private String empresa;
 	private int anoInicio;
 	private int anoFin;
 	private String descripcion;
 
+	//Contructores
 	public Experiencia() {
 	}
 
@@ -26,6 +27,7 @@ public class Experiencia {
 		this.descripcion = descripcion;
 	}
 
+	//Getters and Setters
 	public Long getIdExp() {
 		return idExp;
 	}

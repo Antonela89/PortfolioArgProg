@@ -8,13 +8,14 @@ import javax.persistence.Id;
 @Entity
 public class Educacion {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idEdu;
 	private String institucion;
 	private String titulo;
 	private int anoInicio;
 	private int anoFin;
-
+	
+	//Contructores 
 	public Educacion() {
 	}
 
@@ -26,6 +27,7 @@ public class Educacion {
 		this.anoFin = anoFin;
 	}
 
+	//Getters and Setters
 	public Long getIdEdu() {
 		return idEdu;
 	}
