@@ -33,7 +33,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class AuthController {
 	@Autowired
-	PasswordEncoder passwordEncorer;
+	PasswordEncoder passwordEncoder;
 	@Autowired
 	AuthenticationManager authenticationManager;
 	@Autowired
@@ -56,18 +56,19 @@ public class AuthController {
 			return new ResponseEntity (new Mensaje ("este E-mail ya existe"), HttpStatus.BAD_REQUEST);
 	
 		Usuario usuario = new Usuario(nuevoUsuario.getNombre(), nuevoUsuario.getNombreUsuario(), 
-				nuevoUsuario.getEmail(), passwordEncorer.encode(nuevoUsuario.getPassword()));
+				nuevoUsuario.getEmail(), passwordEncoder.encode(nuevoUsuario.getPassword()));
 		
 		Set<Rol>roles = new HashSet<>();
-		roles.add(rolService.getbyRolNombre(RolNombre.ROLE_USER).get());
+		roles.add(rolService.getByRolNombre(RolNombre.ROLE_USER).get());
 		
 		if (nuevoUsuario.getRoles().contains("admin"))
-			roles.add(rolService.getbyRolNombre(RolNombre.ROLE_ADMIN).get());
+			roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
 		usuario.setRoles(roles);
-		usuarioService.save(usuarioService);
+		usuarioService.save(usuario);
 		
 		return new ResponseEntity(new Mensaje("Usuario guardado"),HttpStatus.CREATED);
 	}
+	
 	
 	@PostMapping("/login")
 	public ResponseEntity<JwtDto> login (@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult ){
@@ -82,7 +83,6 @@ public class AuthController {
 		UserDetails userDetails = (UserDetails)authentication.getPrincipal();
 		
 		JwtDto jwtDto = new JwtDto(jwt, userDetails.getUsername(),userDetails.getAuthorities());
-		return new ResponseEntity(jwtDto,HttpStatus.OK);
-		
+		return new ResponseEntity(jwtDto,HttpStatus.OK);	
 	}
 }

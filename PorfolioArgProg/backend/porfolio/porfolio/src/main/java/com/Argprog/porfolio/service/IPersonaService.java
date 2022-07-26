@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface IPersonaService {
 	
-	public List <Persona> verPersonas ();
+	public List<Persona> verPersonas();
 	
-	public void crearPersona (Persona persona);
+	public void crearPersona(Persona persona);
 	
-	public void eliminarPersona (Long id);
+	public void eliminarPersona(Long id);
 	
-	public Persona buscarPersona (Long id);
+	public Persona buscarPersona(Long id);
 }

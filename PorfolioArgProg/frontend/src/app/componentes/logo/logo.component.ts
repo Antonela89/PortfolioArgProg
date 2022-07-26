@@ -3,6 +3,7 @@ import {
 
 } from '@angular/animations';
 
+
 @Component({
   selector: 'app-logo',
   templateUrl: './logo.component.html',
@@ -16,6 +17,6 @@ export class LogoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
-
 }

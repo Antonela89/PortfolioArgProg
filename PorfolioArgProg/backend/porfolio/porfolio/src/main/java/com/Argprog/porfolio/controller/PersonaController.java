@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.Argprog.porfolio.service.IPersonaService;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
@@ -25,15 +26,16 @@ public class PersonaController {
 	@Autowired
 	private IPersonaService personaService;
 	
-	@PostMapping("/nuevo/persona")
-	public void agregarPersona (@RequestBody Persona persona){
-		personaService.crearPersona(persona);
-	}		
-
-	@GetMapping("/ver/persona")
+	@GetMapping("/ver")
 	@ResponseBody 
 	public List<Persona> verPersona (){
 		return personaService.verPersonas();
+	}
+	
+	@PreAuthorize("hasRole('ADMIN')")
+	@PostMapping("/nuevo")
+	public void agregarPersona (@RequestBody Persona persona){
+		personaService.crearPersona(persona);
 	}
 	
 	@DeleteMapping("/borrar/{id}")

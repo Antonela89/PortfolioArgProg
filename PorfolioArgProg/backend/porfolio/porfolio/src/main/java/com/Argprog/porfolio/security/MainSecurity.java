@@ -36,22 +36,21 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
 	}
 
 	@Override
-	protected void configure (HttpSecurity http) throws Exception {
+	protected void configure(HttpSecurity http) throws Exception {
 		http.cors().and().csrf().disable()
 			.authorizeRequests()
-			.antMatchers("/auth/**").permitAll()
+			.antMatchers("**").permitAll()
 			.anyRequest().authenticated()
 			.and().exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
 			.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	}
 	
-	
-
 	@Override
 	protected AuthenticationManager authenticationManager() throws Exception {
 		return super.authenticationManager();
 	}
 
+	@Bean
 	@Override
 	public AuthenticationManager authenticationManagerBean() throws Exception {
 		return super.authenticationManagerBean();
@@ -61,7 +60,4 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsServiceImpl).passwordEncoder(passwordEncoder());
 	}
-	
-	
-
 }

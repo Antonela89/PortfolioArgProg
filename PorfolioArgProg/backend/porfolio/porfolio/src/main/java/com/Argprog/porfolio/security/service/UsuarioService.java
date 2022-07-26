@@ -14,7 +14,7 @@ public class UsuarioService {
 	@Autowired 
 	IUsuarioRepository iusuarioRepository;
 	
-	public Optional<com.Argprog.porfolio.models.Persona>getByNombreUsuario(String nombreUsuario){
+	public Optional<Usuario>getByNombreUsuario(String nombreUsuario){
 		return iusuarioRepository.findByNombreUsuario(nombreUsuario);
 	}
 	
@@ -26,8 +26,7 @@ public class UsuarioService {
 		return iusuarioRepository.existsByEmail(email);
 	}
 	
-	public void save(UsuarioService usuarioservice){
-		iusuarioRepository.save(usuarioservice);
-	}
-	
+	public void save(Usuario usuario){
+		iusuarioRepository.save(usuario);
+	}	
 }
